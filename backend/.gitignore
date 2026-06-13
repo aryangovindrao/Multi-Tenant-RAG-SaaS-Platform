@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+
+# Env
+.env
+
+# Local SQLite dev database
+*.db
+*.db-journal
+
+# Uploads (keep the folder, ignore the files)
+uploads/*
+!uploads/.gitkeep
+
+# Models cache (sentence-transformers downloads here)
+.cache/

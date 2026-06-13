@@ -1,0 +1,46 @@
+# ── Web framework ────────────────────────────────────────────────────────────
+fastapi==0.115.5
+uvicorn[standard]==0.32.1
+
+# ── Database ─────────────────────────────────────────────────────────────────
+sqlalchemy[asyncio]==2.0.36
+aiosqlite==0.20.0        # local-dev driver (SQLite, no server)
+asyncpg==0.30.0          # production driver (PostgreSQL)
+pgvector==0.3.6
+alembic==1.14.0
+
+# ── Validation / Settings ─────────────────────────────────────────────────────
+pydantic==2.10.3
+pydantic-settings==2.7.0
+pydantic[email]==2.10.3
+
+# ── Auth ─────────────────────────────────────────────────────────────────────
+python-jose[cryptography]==3.3.0
+passlib==1.7.4
+bcrypt==4.0.1            # pinned: passlib 1.7.4 mis-reads bcrypt>=4.1 version
+python-multipart==0.0.17
+
+# ── AI / LLM ─────────────────────────────────────────────────────────────────
+langchain==0.3.13
+langchain-groq>=0.2,<0.3       # FREE tier LLM (https://console.groq.com)
+langchain-openai>=0.2,<0.3     # optional alternative provider
+langchain-community==0.3.13
+openai>=1.58                   # transitive dep of langchain-openai
+
+# ── Embeddings ────────────────────────────────────────────────────────────────
+sentence-transformers==3.3.1
+numpy==1.26.4
+
+# ── PDF parsing ───────────────────────────────────────────────────────────────
+pypdf==5.1.0
+
+# ── Async utilities ───────────────────────────────────────────────────────────
+aiofiles==24.1.0
+httpx==0.28.1
+
+# ── Google OAuth ─────────────────────────────────────────────────────────────
+google-auth==2.37.0
+google-auth-oauthlib==1.2.1
+
+# ── Dev ───────────────────────────────────────────────────────────────────────
+python-dotenv==1.0.1
